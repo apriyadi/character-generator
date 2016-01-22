@@ -1,0 +1,60 @@
+{
+  "name": "tuts",
+  "version": "0.0.0-semanticly-release",
+  "description": "starwars name tutorial, name generator",
+  "main": "dist/index.js",
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/index.js --out-file dist/index.js",
+    "postbuild": "cp src/starwars-names.json dist/starwars-names.json",
+    "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "babel-istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apriyadi/starwars-name.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars"
+  ],
+  "author": "Adi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apriyadi/starwars-name/issues"
+  },
+  "homepage": "https://github.com/apriyadi/starwars-name#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "babel": "6.3.26",
+    "babel-cli": "6.4.5",
+    "babel-istanbul": "0.6.0",
+    "babel-preset-es2015": "6.3.13",
+    "chai": "3.4.1",
+    "codecov.io": "0.1.6",
+    "commitizen": "2.5.0",
+    "condition-circle": "1.2.0",
+    "cz-conventional-changelog": "1.1.5",
+    "ghooks": "1.0.3",
+    "istanbul": "0.4.2",
+    "mocha": "2.3.4",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test && npm run check-coverage"
+    }
+  }
+}

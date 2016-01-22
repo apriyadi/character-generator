@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: "0.12"
+branches:
+    only:
+      - master
+test:
+  override:
+    - npm run test
+    - npm run check-coverage
+    - npm run build
+  post:
+    - DEBUG=condition npm run semantic-release || true
+    - npm run report-coverage
