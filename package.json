@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src/index.js --out-file dist/index.js",
-    "postbuild": "cp src/names.json dist/names.json && cp src/index.html dist/index.html",
+    "postbuild": "cp src/names.json dist/names.json",
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
