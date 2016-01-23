@@ -1,7 +1,7 @@
 {
   "name": "tuts",
   "version": "0.0.0-semanticly-release",
-  "description": "starwars name tutorial, name generator",
+  "description": "Character name generator",
   "main": "dist/index.js",
   "release": {
     "verifyConditions": "condition-circle"
@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src/index.js --out-file dist/index.js",
-    "postbuild": "cp src/starwars-names.json dist/starwars-names.json",
+    "postbuild": "cp src/names.json dist/names.json",
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
@@ -18,19 +18,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apriyadi/starwars-name.git"
+    "url": "https://github.com/apriyadi/character-generator.git"
   },
   "keywords": [
     "random",
-    "star",
-    "wars"
+    "character",
+    "generator"
   ],
   "author": "Adi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apriyadi/starwars-name/issues"
+    "url": "https://github.com/apriyadi/character-generator/issues"
   },
-  "homepage": "https://github.com/apriyadi/starwars-name#readme",
+  "homepage": "https://github.com/apriyadi/character-generator#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
   },
