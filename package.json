@@ -1,5 +1,5 @@
 {
-  "name": "character name generator",
+  "name": "character-name-generator",
   "version": "0.0.0-semanticly-release",
   "description": "Character name generator",
   "main": "dist/index.js",
