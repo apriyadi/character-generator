@@ -7,9 +7,18 @@
 [![Codecov](https://img.shields.io/codecov/c/github/apriyadi/character-generator/master.svg)](https://codecov.io/github/apriyadi/starwars-name)
 
 ## Testing implementation:
-* Npm publishing ()
+* Npm publishing (https://www.npmjs.com/package/character-name-generator)
 * Git publishing (https://github.com/apriyadi/character-generator)
-* Unit testing with Mocha & Chai
+* Unit testing with Mocha, Chai and ghooks
 * Coverage testing with Babel Istanbul
-* Semantic release to Circle CI
+* Coverage reporting with Codecov.io (https://codecov.io/github/apriyadi/character-generator)
+* Semantic release via CircleCI (https://circleci.com/gh/apriyadi/character-generator)
 * ES6 support with Babel
+
+## Details:
+* Install: $npm install
+* Run test: $npm run test
+* Add changes to git: $git add -A
+* Commit via Cometizen: $npm run commit
+* Integration is initiated when repo is pushed back to git: $git push
+
