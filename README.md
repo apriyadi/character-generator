@@ -1,10 +1,10 @@
 # Character-name-generator
 
 
-
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![CircleCI](https://img.shields.io/circleci/project/apriyadi/character-generator.svg)](https://circleci.com/gh/apriyadi/starwars-name)
-[![Codecov](https://img.shields.io/codecov/c/github/apriyadi/character-generator/master.svg)](https://codecov.io/github/apriyadi/starwars-name)
+[![CircleCI](https://img.shields.io/circleci/project/apriyadi/character-generator.svg)](https://circleci.com/gh/apriyadi/character-generator)
+[![Codecov](https://img.shields.io/codecov/c/github/apriyadi/character-generator)](https://codecov.io/github/apriyadi/character-generator)
+
 
 ## Testing implementation:
 * Npm publishing (https://www.npmjs.com/package/character-name-generator)
@@ -22,3 +22,29 @@
 * Commit via Cometizen: $npm run commit
 * Integration is initiated when repo is pushed back to git: $git push
 
+
+### To install
+
+```bash
+npm install
+
+```
+
+### To push changes
+
+```bash
+git add -A
+
+npm run commit
+
+git push
+
+```
+
+### Manual test
+
+```bash
+
+npm run test
+
+```
